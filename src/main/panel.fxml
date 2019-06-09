@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Interface">
+   <children>
+      <Text layoutX="15.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Параметр a  = " />
+      <TextField fx:id="parametr" layoutX="120.0" layoutY="130.0" prefHeight="27.0" prefWidth="65.0" promptText="Infinity" />
+      <Text layoutX="15.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Крок  =  " />
+      <TextField fx:id="step" layoutX="120.0" layoutY="187.0" prefHeight="27.0" prefWidth="65.0" promptText="&gt;0.001" />
+      <LineChart fx:id="lineChar" createSymbols="false" layoutX="182.0" layoutY="21.0" prefHeight="316.0" prefWidth="398.0">
+        <xAxis>
+            <NumberAxis autoRanging="true" lowerBound="-20" side="BOTTOM" tickUnit="4" upperBound="20" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis autoRanging="true" lowerBound="-3" side="LEFT" tickUnit="1" upperBound="3" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="build" layoutX="120.0" layoutY="360.0" mnemonicParsing="false" onAction="#buildHandle" text="Побудувати" />
+      <ImageView fitHeight="68.0" fitWidth="128.0" layoutX="31.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/function.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="15.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ліва межа = "/>
+      <Text layoutX="15.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Права межа = "/>
+      <TextField fx:id="leftLimit" layoutX="120.0" layoutY="239.0" prefHeight="27.0" prefWidth="65.0" promptText="&gt;0" />
+      <TextField fx:id="rightLimit" layoutX="120.0" layoutY="295.0" prefHeight="27.0" prefWidth="65.0" promptText="Infinity" />
+      <Button fx:id="saveButton" layoutX="15.0" layoutY="360.0" mnemonicParsing="false" onAction="#saveButtonHandle" text="Зберегти" />
+   </children>
+</AnchorPane>
