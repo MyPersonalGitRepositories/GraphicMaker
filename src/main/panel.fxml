@@ -29,7 +29,8 @@
       </ImageView>
       <Text layoutX="15.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ліва межа = "/>
       <Text layoutX="15.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Права межа = "/>
-      <TextField fx:id="leftLimit" layoutX="120.0" layoutY="239.0" prefHeight="27.0" prefWidth="65.0" promptText="&gt;0" />
+       <TextField fx:id="leftLimit" layoutX="120.0" layoutY="239.0" prefHeight="27.0" prefWidth="65.0"
+                  promptText="&gt;=0"/>
        <TextField fx:id="rightLimit" layoutX="120.0" layoutY="295.0" prefHeight="27.0" prefWidth="65.0"
                   promptText="&gt;Лівої"/>
       <Button fx:id="saveButton" layoutX="15.0" layoutY="360.0" mnemonicParsing="false" onAction="#saveButtonHandle" text="Зберегти" />
